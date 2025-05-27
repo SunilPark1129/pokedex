@@ -5,9 +5,13 @@
   --clr-white: #dedede;
   --clr-gray: #c5c5c5;
 
-  --clr-evo1: #98d160;
-  --clr-evo2: #737fcd;
-  --clr-evo3: #d64747;
+  --clr-grass: #98d160;
+  --clr-fire: #d64747;
+  --clr-water: #737fcd;
+
+  --clr-evo1: #c5c5c5;
+  --clr-evo2: #32313b;
+  --clr-evo3: #431670;
 
   --clr-disable: #4b4b4b;
 

@@ -30,17 +30,22 @@ export const fetchPokeDeck = createAsyncThunk(
         const name = entry.pokemon_species.name;
         const entryRes = await fetch(`${BASE_URL}/pokemon/${name}`);
         const entryData = await entryRes.json();
-        const types = entryData.types.map((t) => t.type.name);
-        const isValidType = types.some((type) => validTypes[type]);
+        const type = entryData.types.find((t) => validTypes[t.type.name]);
+        // const types = entryData.types.map((t) => t.type.name);
+        // const type = types.find((type) => validTypes[type]);
+
+        // const a = entryData.types.find((t) => validTypes[t.type.name]);
+        // console.log(a);
 
         // if it is not valid pokemon type (grass,fire,water)
         // then return as null
-        if (!isValidType) return null;
+        if (!type) return null;
 
         return {
           id: entryData.id,
           name: entryData.name,
           sprite: entryData.sprites.front_default,
+          type: type.type.name,
         };
       })
     );

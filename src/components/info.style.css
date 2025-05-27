@@ -20,6 +20,7 @@
   gap: 0.25em;
   align-items: center;
   flex-wrap: wrap;
+  color: rgb(175, 175, 175);
 }
 
 .info__colors span {
@@ -27,21 +28,47 @@
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+  border: 1px solid #c7c7c7;
 }
 
-.info__colors div:nth-of-type(1) span {
+.info__colors--type div:nth-of-type(1) span {
+  background-color: var(--clr-grass);
+}
+.info__colors--type div:nth-of-type(2) span {
+  background-color: var(--clr-fire);
+}
+.info__colors--type div:nth-of-type(3) span {
+  background-color: var(--clr-water);
+}
+
+.info__colors--evol div:nth-of-type(1) span {
   background-color: var(--clr-evo1);
 }
-.info__colors div:nth-of-type(2) span {
+.info__colors--evol div:nth-of-type(2) span {
   background-color: var(--clr-evo2);
 }
-.info__colors div:nth-of-type(3) span {
+.info__colors--evol div:nth-of-type(3) span {
   background-color: var(--clr-evo3);
+}
+
+.info__type span {
+  outline: 1px solid #fff;
+  outline-offset: 0.25rem;
+}
+
+.info__evol span {
+  outline: 1px solid #fff;
+  outline-offset: 0.25rem;
 }
 
 @media (max-width: 400px) {
   .info__colors {
     gap: 0.5em;
     flex-direction: column;
+  }
+
+  .info__colors div {
+    display: flex;
+    justify-content: space-between;
   }
 }

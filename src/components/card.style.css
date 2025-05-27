@@ -11,6 +11,18 @@
   min-width: 200px;
   flex: 1 1 100%;
 }
+.card--grass {
+  background-color: var(--clr-grass);
+}
+
+.card--fire {
+  background-color: var(--clr-fire);
+}
+
+.card--water {
+  background-color: var(--clr-water);
+}
+
 .card--first:hover {
   background-color: var(--clr-evo1);
 }

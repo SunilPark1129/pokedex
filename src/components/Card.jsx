@@ -7,7 +7,7 @@ function Card() {
 
   if (isLoading) return <Loading></Loading>;
 
-  const { name, sprite, evolvedPath } = selectedPokemon;
+  const { name, sprite, evolvedPath, type } = selectedPokemon;
 
   let style = "";
   if (evolvedPath[name].evolved === 0) {
@@ -16,6 +16,14 @@ function Card() {
     style = "card--second";
   } else if (evolvedPath[name].evolved === 2) {
     style = "card--third";
+  }
+
+  if (type === "grass") {
+    style += " card--grass";
+  } else if (type === "fire") {
+    style += " card--fire";
+  } else if (type === "water") {
+    style += " card--water";
   }
 
   return (
