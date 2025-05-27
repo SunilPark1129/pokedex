@@ -12,6 +12,5 @@ npm i
 
 - start<br/>
 ```
-npm run json-server
 npm run dev
 ```
