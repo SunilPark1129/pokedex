@@ -1,0 +1,56 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #242424;
+
+  --clr-white: #dedede;
+  --clr-gray: #c5c5c5;
+
+  --clr-evo1: #98d160;
+  --clr-evo2: #737fcd;
+  --clr-evo3: #d64747;
+
+  --clr-disable: #4b4b4b;
+
+  color: var(--clr-white);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  place-content: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0.5em;
+}
+
+.wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  main {
+    gap: 1rem;
+  }
+}

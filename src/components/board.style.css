@@ -1,0 +1,57 @@
+.board {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.board__btn {
+  align-self: end;
+  flex: 1 1 45%;
+  max-width: 8rem;
+  height: 3em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--clr-gray);
+  color: var(--clr-gray);
+  border-radius: 4px;
+  padding: 1em 0.25em;
+  cursor: pointer;
+}
+
+.board__btn:disabled {
+  color: var(--clr-disable);
+  border: 1px solid var(--clr-disable);
+}
+
+.board__btn:hover {
+  background-color: #2a3c61;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 525px) {
+  .board {
+    flex-wrap: wrap;
+    gap: 0.5em;
+    max-width: 260px;
+    margin: auto;
+  }
+
+  .board__btn {
+    margin-top: 0.25em;
+  }
+
+  .board__btn--left {
+    order: 1;
+  }
+
+  .board__btn--right {
+    order: 2;
+  }
+}
