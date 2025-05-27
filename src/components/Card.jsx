@@ -10,11 +10,11 @@ function Card() {
   const { name, sprite, evolvedPath, type } = selectedPokemon;
 
   let style = "";
-  if (evolvedPath[name].evolved === 0) {
+  if (evolvedPath[name]?.evolved === 0) {
     style = "card--first";
-  } else if (evolvedPath[name].evolved === 1) {
+  } else if (evolvedPath[name]?.evolved === 1) {
     style = "card--second";
-  } else if (evolvedPath[name].evolved === 2) {
+  } else if (evolvedPath[name]?.evolved === 2) {
     style = "card--third";
   }
 

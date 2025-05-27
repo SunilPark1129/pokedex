@@ -15,6 +15,7 @@ export const fetchPokeDeck = createAsyncThunk(
   async () => {
     // using pokedex/2 for the ending point
     // in this deck, it has 151 pokemons
+    // change it to pokedex/1 to get over 1000 pokemons
     const res = await fetch(BASE_URL + "pokedex/2");
     const data = await res.json();
 
@@ -27,8 +28,9 @@ export const fetchPokeDeck = createAsyncThunk(
     // get pokemon info
     const pokeLists = await Promise.all(
       data.pokemon_entries.map(async (entry) => {
-        const name = entry.pokemon_species.name;
-        const entryRes = await fetch(`${BASE_URL}/pokemon/${name}`);
+        const entryRes = await fetch(
+          `${BASE_URL}pokemon/${entry.entry_number}`
+        );
         const entryData = await entryRes.json();
         const type = entryData.types.find((t) => validTypes[t.type.name]);
 
